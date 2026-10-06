@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "worldtier:mythril_ore",
+    "worldtier:adamantite_ore"
+  ]
+}

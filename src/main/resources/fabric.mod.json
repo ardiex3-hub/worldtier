@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "worldtier",
+  "version": "${version}",
+  "name": "World Tier",
+  "description": "Progresi ala Terraria: kalahkan boss untuk membuka bijih baru dan membuat dunia lebih sulit.",
+  "authors": ["Anda"],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": { "main": ["com.example.worldtier.WorldTierMod"] },
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": ">=26.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
