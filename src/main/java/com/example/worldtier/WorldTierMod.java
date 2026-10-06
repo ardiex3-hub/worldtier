@@ -16,6 +16,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -80,10 +81,10 @@ public class WorldTierMod implements ModInitializer {
 
     // ---------- Boss dikalahkan -> tier naik ----------
     private static int bossFlag(EntityType<?> type) {
-        if (type == EntityType.ELDER_GUARDIAN) return WorldTierData.GUARDIAN;
-        if (type == EntityType.WITHER) return WorldTierData.WITHER;
-        if (type == EntityType.WARDEN) return WorldTierData.WARDEN;
-        if (type == EntityType.ENDER_DRAGON) return WorldTierData.DRAGON;
+        if (type == EntityTypes.ELDER_GUARDIAN) return WorldTierData.GUARDIAN;
+        if (type == EntityTypes.WITHER) return WorldTierData.WITHER;
+        if (type == EntityTypes.WARDEN) return WorldTierData.WARDEN;
+        if (type == EntityTypes.ENDER_DRAGON) return WorldTierData.DRAGON;
         return 0;
     }
 
@@ -153,7 +154,7 @@ public class WorldTierMod implements ModInitializer {
                 return;
             }
             EntityType<?> type = living.getType();
-            if (type == EntityType.WITHER || type == EntityType.WARDEN) {
+            if (type == EntityTypes.WITHER || type == EntityTypes.WARDEN) {
                 return;
             }
             int tier = WorldTierData.get(level.getServer()).getTier();
